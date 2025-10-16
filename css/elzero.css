@@ -144,6 +144,11 @@ header .main-nav > li > a:hover::before {
   transform-origin: top left;
   z-index: -1;
 }
+@media (max-width: 767px){
+  .landing::before{
+  top:-100px;
+  }
+}
 .landing .container {
   min-height: calc(100vh - 72px);
   display: flex;
