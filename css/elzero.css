@@ -202,7 +202,12 @@ header .main-nav > li > a:hover::before {
   left: 50%;
   transform: translateX(-50%);
   transition: var(--main-transition);
-  animation: arwo 2s linear in;
+  
+}
+@media (max-width: 767px) {
+  .landing .go-down{
+  bottom:70px;
+  }
 }
 .landing .go-down:hover {
   color: var(--main-color-alt);
