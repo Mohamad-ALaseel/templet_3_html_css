@@ -206,7 +206,7 @@ header .main-nav > li > a:hover::before {
 }
 @media (max-width: 767px) {
   .landing .go-down{
-  bottom:70px;
+  bottom:120px;
   }
 }
 .landing .go-down:hover {
