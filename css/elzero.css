@@ -89,7 +89,6 @@ header .logo {
 header .main-nav {
   display: flex;
 }
-
 header .main-nav > li > a {
   height: 72px;
   position: relative;
@@ -127,6 +126,87 @@ header .main-nav > li > a:hover {
 header .main-nav > li > a:hover::before {
   left: 0;
 }
+/* start megamenu */
+header .main-nav .megamenu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  gap: 40px;
+  padding: 30px;
+  opacity: 0;
+  z-index: -1;
+  top: calc(100% + 50px);
+  transition: top var(--main-transition), opacity var(--main-transition);
+  border-bottom: 3px solid var(--main-color);
+}
+header .main-nav .megamenu img {
+  max-width: 100%;
+}
+@media (max-width: 992px) {
+  header .main-nav .megamenu .image {
+    display: none;
+  }
+}
+header .main-nav .megamenu ul {
+  flex: 1;
+  min-width: 240px;
+}
+@media (max-width: 767px) {
+  header .main-nav .megamenu {
+    flex-direction: column;
+    gap: 0;
+    padding: 5px;
+    border-bottom: 3px solid var(--main-color);
+  }
+  header .main-nav .megamenu ul li a:last-child {
+    border: none;
+  }
+}
+header .main-nav .megamenu ul li {
+  position: relative;
+}
+header .main-nav .megamenu ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #fafafa;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+header .main-nav .megamenu ul li:hover:before {
+  width: 100%;
+}
+header .main-nav .megamenu ul li a {
+  display: block;
+  padding: 15px;
+  font-size: 18px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+header .main-nav .megamenu ul li:not(:last-child) {
+  border-bottom: 1px solid #eaeaea;
+}
+@media (max-width: 767px) {
+  header .main-nav .megamenu ul:first-of-type li {
+    border-bottom: 1px solid #eaeaea;
+  }
+}
+header .main-nav .megamenu ul li a i {
+  margin-right: 10px;
+}
+header .main-nav .activ:hover .megamenu {
+  opacity: 1;
+  z-index: 100;
+  top: calc(100% + 1px);
+}
+
+/* end megamenu */
+
 /* end header  */
 /* start landing */
 .landing {
@@ -144,9 +224,9 @@ header .main-nav > li > a:hover::before {
   transform-origin: top left;
   z-index: -1;
 }
-@media (max-width: 767px){
-  .landing::before{
-  top:-100px;
+@media (max-width: 767px) {
+  .landing::before {
+    top: -100px;
   }
 }
 .landing .container {
@@ -202,17 +282,16 @@ header .main-nav > li > a:hover::before {
   left: 50%;
   transform: translateX(-50%);
   transition: var(--main-transition);
-  
 }
 @media (max-width: 767px) {
-  .landing .go-down{
-  bottom:105px;
+  .landing .go-down {
+    bottom: 90px;
   }
 }
 .landing .go-down:hover {
   color: var(--main-color-alt);
 }
-.landing .go-down i{
+.landing .go-down i {
   animation: arwo 1.5s infinite;
 }
 /* end landing */
