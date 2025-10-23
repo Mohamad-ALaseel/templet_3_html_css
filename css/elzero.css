@@ -507,3 +507,44 @@ header .main-nav .activ:hover .megamenu {
 }
 
 /* end gallery */
+
+/* start features */
+.features {
+  padding: var(--main-padding-bottom) 0;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 40px;
+}
+.features .container .box {
+  border: 2px solid #eaeaea;
+  position: relative;
+  padding: 0 0 30px;
+  
+}
+.features .container .box .image img {
+  max-width: 100%;
+}
+.features .container .box .text {
+  padding: 20px 20px 40px;
+  text-align: center;
+}
+.features .container .box h2 {
+}
+.features .container .box p {
+}
+.features .container .box .link{
+  display: flex;
+  justify-content: center;
+}
+.features .container .box a {
+  font-weight: bold;
+  padding: 10px 25px;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: block;
+  width: fit-content;
+  
+}
+/* start features */
