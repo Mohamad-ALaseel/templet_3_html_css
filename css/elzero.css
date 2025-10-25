@@ -521,30 +521,117 @@ header .main-nav .activ:hover .megamenu {
   border: 2px solid #eaeaea;
   position: relative;
   padding: 0 0 30px;
-  
+}
+.features .container .box .image {
+  position: relative;
+  overflow: hidden;
 }
 .features .container .box .image img {
   max-width: 100%;
+}
+.features .container .box .image::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  opacity: 0.6;
+}
+.features .container .box .image::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  border-style: solid;
+  border-width: 0px 0px 170px 500px;
+  border-color: transparent transparent white transparent;
+  transition: var(--main-transition);
+}
+.features .box:hover .image::after {
+  border-width: 170px 500px 170px 0;
 }
 .features .container .box .text {
   padding: 20px 20px 40px;
   text-align: center;
 }
 .features .container .box h2 {
+  font-size: 40px;
+  padding-bottom: 20px;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+.features .container .box h2::before {
+  content: "";
+  height: 5px;
+  width: calc(100% - 30px);
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .features .container .box p {
+  color: #777;
+  line-height: 2;
 }
-.features .container .box .link{
+.features .container .box .link {
   display: flex;
   justify-content: center;
 }
 .features .container .box a {
   font-weight: bold;
-  padding: 10px 25px;
-  border: 2px solid black;
+  padding: 10px 30px;
+  border: 3px solid black;
   border-radius: 5px;
   display: block;
   width: fit-content;
-  
+  font-size: 22px;
+  margin: auto;
+  transition: var(--main-transition);
+}
+.features .container .box:hover a{ 
+  background-position: left bottom;
+  color: white;
+}
+.features .container .quality h2::before {
+  background-color: #f43d34;
+}
+.features .container .quality a {
+  border-color: #f43d34;
+  color: #f44036;
+  background: linear-gradient(to right, #f43d34 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .container .quality .image::before {
+  background-color: rgb(244 61 52);
+}
+.features .container .time h2::before {
+  background-color: #009688;
+}
+.features .container .time a {
+  border-color: #009688;
+  color: #009688;
+  background: linear-gradient(to right, #009688 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .container .time .image::before {
+  background-color: #009688;
+}
+.features .container .passion h2::before {
+  background-color: rgb(2, 166, 242);
+}
+.features .container .passion a {
+  border-color: #03a9f4;
+  color: #03a9f4;
+  background: linear-gradient(to right, #03a9f4 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .container .passion .image::before {
+  background-color: rgb(2 166 242);
 }
 /* start features */
