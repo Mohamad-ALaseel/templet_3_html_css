@@ -591,7 +591,7 @@ header .main-nav .activ:hover .megamenu {
   margin: auto;
   transition: var(--main-transition);
 }
-.features .container .box:hover a{ 
+.features .container .box:hover a {
   background-position: left bottom;
   color: white;
 }
@@ -635,3 +635,48 @@ header .main-nav .activ:hover .megamenu {
   background-color: rgb(2 166 242);
 }
 /* start features */
+
+/* start Testimonials */
+.testimonials {
+  padding: var(--main-padding-top) 0;
+  background-color: var(--section-background);
+}
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 40px;
+}
+.testimonials .container .box {
+  background-color: white;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  padding: 20px;
+  position: relative;
+  border-radius: 5px;
+  transition: var(--main-transition);
+}
+
+.testimonials .container .box img {
+  width: 100px;
+  border-radius: 50%;
+  border: 10px solid var(--section-background);
+  position: absolute;
+  right: -10px;
+  top: -50px;
+}
+.testimonials .container .box h3 {
+  margin: 0;
+  padding-bottom: 10px;
+}
+.testimonials .container .box p {
+  color: #777;
+  line-height: 1.6;
+  margin: 0;
+}
+.testimonials .container .box .items i{
+  
+}
+.testimonials .container .box .items .filled {
+  padding: 10px 0;
+  color: #ffc107;
+}
+/* end Testimonials */
