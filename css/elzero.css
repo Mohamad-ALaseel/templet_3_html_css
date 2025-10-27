@@ -652,9 +652,20 @@ header .main-nav .activ:hover .megamenu {
   padding: 20px;
   position: relative;
   border-radius: 5px;
-  transition: var(--main-transition);
 }
-
+.testimonials .box:hover img {
+  animation: rotat 0.6s ease-in-out;
+}
+@keyframes rotat {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+  100% {
+    transform: rotate(-360deg);
+    transform-origin: center;
+  }
+}
 .testimonials .container .box img {
   width: 100px;
   border-radius: 50%;
@@ -672,11 +683,39 @@ header .main-nav .activ:hover .megamenu {
   line-height: 1.6;
   margin: 0;
 }
-.testimonials .container .box .items i{
-  
-}
 .testimonials .container .box .items .filled {
   padding: 10px 0;
   color: #ffc107;
 }
 /* end Testimonials */
+/* start Team Members */
+.team-members {
+  padding-bottom: var(--main-padding-bottom);
+  padding-top: var(--main-padding-bottom);
+  position: relative;
+}
+.team-members .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 40px;
+}
+.team-members .box {
+  background-color: var(--section-background);
+  padding: 20px;
+}
+.team-members .box .cont {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.team-members .box .cont img {
+  max-width: 100%;
+  
+}
+.team-members .box .cont .items {
+}
+.team-members .box h3 {
+}
+.team-members .box p {
+}
+/* end Team Members */
