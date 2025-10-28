@@ -95,69 +95,6 @@ ul {
   animation: right-move 0.5s linear forwards;
 }
 /* end global rules */
-
-/* start anmashin */
-@keyframes up-dwon {
-  0%,
-  100% {
-    top: 0;
-  }
-  50% {
-    top: -50px;
-  }
-}
-@keyframes arwo {
-  00%,
-  10%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40%,
-  60% {
-    transform: translateY(-15px);
-  }
-}
-@keyframes left-move {
-  50% {
-    left: 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 0;
-  }
-  100% {
-    left: 0;
-    border-radius: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-@keyframes right-move {
-  50% {
-    right: 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 0;
-  }
-  100% {
-    right: 0;
-    border-radius: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-@keyframes before {
-  100% {
-    width: 110%;
-    height: 110%;
-    opacity: 1;
-  }
-}
-
-/* end anmashin */
-
 /* start header  */
 header {
   background-color: white;
@@ -656,16 +593,7 @@ header .main-nav .activ:hover .megamenu {
 .testimonials .box:hover img {
   animation: rotat 0.6s ease-in-out;
 }
-@keyframes rotat {
-  0% {
-    transform: rotate(0deg);
-    transform-origin: center;
-  }
-  100% {
-    transform: rotate(-360deg);
-    transform-origin: center;
-  }
-}
+
 .testimonials .container .box img {
   width: 100px;
   border-radius: 50%;
@@ -697,25 +625,159 @@ header .main-nav .activ:hover .megamenu {
 .team-members .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  gap: 40px;
+  gap: 30px;
 }
 .team-members .box {
-  background-color: var(--section-background);
-  padding: 20px;
+  position: relative;
+}
+.team-members .box::before,
+.team-members .box::after {
+  content: "";
+  background-color: #f3f3f3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+
+  border-radius: 10px;
+  transition: var(--main-transition);
+}
+.team-members .box::before {
+  width: calc(100% - 60px);
+  z-index: -2;
+}
+.team-members .box::after {
+  z-index: -1;
+  background-color: #e4e4e4;
+  width: 0;
+}
+.team-members .box:hover:after {
+  width: calc(100% - 60px);
+}
+.team-members .box:hover img {
+  filter: grayscale(100%);
 }
 .team-members .box .cont {
   display: flex;
   justify-content: center;
   position: relative;
+  padding-top: 60px;
 }
 .team-members .box .cont img {
-  max-width: 100%;
-  
+  max-width: calc(100% - 60px);
+  transition: var(--main-transition);
+  border-radius: 10px;
 }
 .team-members .box .cont .items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.team-members .box .cont .items a {
+  display: block;
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-members .box .cont .items i {
+  color: #777;
+  transition: var(--main-transition);
+
+}
+.team-members .box .cont .items a:hover i{
+  color: var(--main-color);
+}
+.team-members .box .text {
+  padding-left: 80px;
 }
 .team-members .box h3 {
+  color: var(--main-color);
+  transition: var(--main-transition);
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.team-members .box:hover h3{
+  color: #777;
 }
 .team-members .box p {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-size: 19px;
+  
+
 }
 /* end Team Members */
+/* start anmashin */
+@keyframes up-dwon {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+}
+@keyframes arwo {
+  00%,
+  10%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40%,
+  60% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes left-move {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 0;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes right-move {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 0;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes before {
+  100% {
+    width: 110%;
+    height: 110%;
+    opacity: 1;
+  }
+}
+@keyframes rotat {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+  100% {
+    transform: rotate(-360deg);
+    transform-origin: center;
+  }
+}
+/* end anmashin */
