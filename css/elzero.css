@@ -686,9 +686,8 @@ header .main-nav .activ:hover .megamenu {
 .team-members .box .cont .items i {
   color: #777;
   transition: var(--main-transition);
-
 }
-.team-members .box .cont .items a:hover i{
+.team-members .box .cont .items a:hover i {
   color: var(--main-color);
 }
 .team-members .box .text {
@@ -700,17 +699,105 @@ header .main-nav .activ:hover .megamenu {
   font-size: 22px;
   margin-bottom: 0;
 }
-.team-members .box:hover h3{
+.team-members .box:hover h3 {
   color: #777;
 }
 .team-members .box p {
   margin-top: 10px;
   margin-bottom: 25px;
   font-size: 19px;
-  
-
 }
 /* end Team Members */
+
+/* start services */
+.services {
+  padding: var(--main-padding-top) 0;
+  background-color: var(--section-background);
+  position: relative;
+}
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 40px;
+}
+.services .box {
+  background-color: white;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  padding-top: 40px;
+  position: relative;
+  text-align: center;
+  transition: var(--main-transition);
+}
+.services .box::before{
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 3px;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+}
+.services .box:hover{
+  transform: translatey(-10px);
+} 
+.services .box:hover::before{
+  width: 100%;
+}
+
+.services .box i {
+  font-size: 70px;
+  color: #bcbcbc;
+}
+.services .box h3 {
+  color: var(--main-color);
+  font-size: 26px;
+}
+.services .box .text {
+  background-color: rgb(249, 249, 249);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.services .box .text p {
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--main-color);
+  z-index: 5;
+  position: relative;
+}
+.services .box .text p::before {
+  content: "";
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: var(--main-color);
+  z-index: -1;
+  transform: skew(-25deg);
+  right: -15px;
+}
+.services .box .text p::after {
+  content: "";
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #bcbcbc;
+
+  transform: skew(-25deg);
+  right: -65px;
+}
+
+.services .box .text a {
+  padding-right: 15px;
+  color: var(--main-color-alt);
+}
+/* start services */
 /* start anmashin */
 @keyframes up-dwon {
   0%,
