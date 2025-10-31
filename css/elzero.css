@@ -727,8 +727,9 @@ header .main-nav .activ:hover .megamenu {
   position: relative;
   text-align: center;
   transition: var(--main-transition);
+  counter-increment: medo;
 }
-.services .box::before{
+.services .box::before {
   content: "";
   position: absolute;
   width: 0px;
@@ -739,58 +740,53 @@ header .main-nav .activ:hover .megamenu {
   background-color: var(--main-color);
   transition: var(--main-transition);
 }
-.services .box:hover{
+.services .box:hover {
   transform: translatey(-10px);
-} 
-.services .box:hover::before{
+}
+.services .box:hover::before {
   width: 100%;
 }
 
 .services .box i {
   font-size: 70px;
-  color: #bcbcbc;
+  color: #d5d5d5;
 }
 .services .box h3 {
   color: var(--main-color);
   font-size: 26px;
 }
 .services .box .text {
-  background-color: rgb(249, 249, 249);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.services .box .text p {
-  margin: 0;
-  padding: 10px 20px;
-  font-size: 28px;
-  font-weight: bold;
-  color: white;
-  background-color: var(--main-color);
-  z-index: 5;
+  background-color: #f9f9f9;
   position: relative;
+  padding: 15px;
+  text-align: right;
 }
-.services .box .text p::before {
-  content: "";
-  width: 50px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background-color: var(--main-color);
-  z-index: -1;
-  transform: skew(-25deg);
-  right: -15px;
-}
-.services .box .text p::after {
-  content: "";
-  width: 50px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background-color: #bcbcbc;
 
-  transform: skew(-25deg);
-  right: -65px;
+.services .box .text::before {
+  content: "0" counter(medo);
+  position: absolute;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  background: var(--main-color);
+  top: 0;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15px;
+}
+.services .box .text::after {
+  content: "";
+  height: calc(100% + 0.4px);
+  width: 50px;
+  position: absolute;
+  background-color: #d5d5d5;
+  top: 0;
+  left: 80px;
+  transform: skewX(-30deg);
 }
 
 .services .box .text a {
