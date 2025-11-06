@@ -793,7 +793,53 @@ header .main-nav .activ:hover .megamenu {
   padding-right: 15px;
   color: var(--main-color-alt);
 }
-/* start services */
+/* end services */
+/* start skills */
+.our-skills {
+  padding-bottom: var(--main-padding-bottom);
+  padding-top: var(--main-padding-bottom);
+  position: relative;
+}
+.our-skills .container {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .our-skills img {
+    display: none;
+  }
+}
+.our-skills .skills {
+  flex: 1;
+}
+
+.our-skills .skills .skill h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.our-skills .skills .skill h3 span {
+  color: var(--main-color);
+  font-size: 15px;
+  padding: 3px 5px;
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
+}
+.our-skills .skills .the-progras {
+  width: 100%;
+  height: 30px;
+  background-color: #eee;
+  position: relative;
+}
+.our-skills .skills .the-progras span {
+  height: 100%;
+  background-color: var(--main-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.5s linear;
+}
+/* end skills */
 /* start anmashin */
 @keyframes up-dwon {
   0%,
