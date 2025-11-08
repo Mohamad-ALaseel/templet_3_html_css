@@ -888,6 +888,9 @@ header .main-nav .activ:hover .megamenu {
     flex-direction: column;
     text-align: center;
   }
+  .works .container .image{
+    max-width: 100%;
+  }
 }
 
 .works .cont-box .box img {
