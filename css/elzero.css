@@ -1124,16 +1124,21 @@ header .main-nav .activ:hover .megamenu {
   color: #777;
   font-size: 19px;
 }
-.plans .box .info {
+.plans .box ul {
   text-align: left;
 }
-.plans .box .info i {
-  color: var(--main-color);
-}
-.plans .box .info p {
+
+.plans .box ul li {
   padding: 20px;
   border-top: 1px solid var(--section-background);
   margin: 0;
+}
+.plans .box ul li::before{
+  content: "\f00c";
+  font-family: "Font Awesome 5 free";
+  margin-right: 10px;
+  font-weight: 900;
+  color: var(--main-color);
 }
 .plans .box a {
   padding: 15px 20px;
@@ -1144,6 +1149,12 @@ header .main-nav .activ:hover .megamenu {
   border-radius: 5px;
   color: var(--main-color);
   font-weight: bold;
+  transition: var(--main-transition);
+}
+.plans .box a:hover{
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  color: white;
 }
 /* end plans  */
 /* start anmashin */
