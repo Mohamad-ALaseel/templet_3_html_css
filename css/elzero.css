@@ -1069,18 +1069,17 @@ header .main-nav .activ:hover .megamenu {
   z-index: -1;
 }
 .plans .box.box:hover:before,
-.plans .box.box:hover::after{
+.plans .box.box:hover::after {
   width: 100%;
 }
 
 .plans .box:nth-child(2) {
   transform: translateY(-20px);
 }
-@media (max-width:992px) {
+@media (max-width: 992px) {
   .plans .box:nth-child(2) {
-  transform: translateY(0px);
-}
-  
+    transform: translateY(0px);
+  }
 }
 .plans .box h3 {
   margin: 0;
@@ -1133,7 +1132,7 @@ header .main-nav .activ:hover .megamenu {
   border-top: 1px solid var(--section-background);
   margin: 0;
 }
-.plans .box ul li::before{
+.plans .box ul li::before {
   content: "\f00c";
   font-family: "Font Awesome 5 free";
   margin-right: 10px;
@@ -1151,12 +1150,74 @@ header .main-nav .activ:hover .megamenu {
   font-weight: bold;
   transition: var(--main-transition);
 }
-.plans .box a:hover{
+.plans .box a:hover {
   background-color: var(--main-color);
   border-color: var(--main-color);
   color: white;
 }
 /* end plans  */
+
+/* start videos  */
+.videos {
+  padding-bottom: var(--main-padding-bottom);
+  padding-top: var(--main-padding-bottom);
+  position: relative;
+}
+.videos .holder {
+  display: flex;
+  justify-content: center;
+  background-color: var(--section-background);
+  border: 1px solid #ddd;
+}
+@media (max-width: 992px) {
+  .videos .holder {
+    flex-direction: column;
+  }
+}
+.videos .text {
+  min-width: 300px;
+  background-color: white;
+}
+.videos .text .name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+.videos ul li {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.videos ul li:hover {
+  color: var(--main-color);
+  background-color: #fafafa;
+}
+.videos li span {
+  display: block;
+  color: #777;
+  line-height: 1.8;
+}
+.videos .provide {
+  background-color: #e2e2e2;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.videos .provide img {
+  width: 100%;
+}
+.videos .provide div {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: white;
+}
+
+/* end videos  */
 /* start anmashin */
 @keyframes up-dwon {
   0%,
