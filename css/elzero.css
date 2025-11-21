@@ -1380,6 +1380,46 @@ header .main-nav .activ:hover .megamenu {
   font-weight: bold;
 }
 /* end discount */
+
+/* start footer */
+footer {
+}
+footer .about-me {
+}
+footer .about-me h2 {
+}
+footer .about-me ul {
+}
+footer .about-me ul li {
+}
+footer .about-me ul li a {
+}
+footer .about-me ul li i {
+}
+footer .about-me p {
+}
+footer .my-works {
+}
+footer .my-works ul {
+}
+footer .my-works ul {
+}
+footer .my-works ul li {
+}
+footer .my-works ul li a {
+}
+footer .addresses {
+}
+footer .addresses .box {
+}
+footer .addresses .box i {
+}
+footer .addresses .box p {
+}
+footer .addresses .box p span {
+}
+
+/* end footer */
 /* start anmashin */
 @keyframes up-dwon {
   0%,
