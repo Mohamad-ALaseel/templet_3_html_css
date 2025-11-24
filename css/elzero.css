@@ -1478,16 +1478,25 @@ footer h3 {
   text-align: center;
   padding: 20px;
   border-top: 1px solid #444;
-  margin:50px 0 0 0 ;
+  margin: 50px 0 0 0;
   color: white;
-  font-size:25px ;
+  font-size: 25px;
 }
 footer h3 > span {
   color: var(--main-color);
   transform: rotate(-90deg);
   display: inline-block;
-  
-  
+}
+@media (max-width: 762px) {
+  footer {
+    text-align: center;
+  }
+  .footer .cont .social {
+    justify-content: center;
+  }
+  .footer .cont .box {
+    flex-direction: column;
+  }
 }
 /* end footer */
 /* start anmashin */
