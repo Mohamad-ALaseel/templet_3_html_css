@@ -1383,42 +1383,112 @@ header .main-nav .activ:hover .megamenu {
 
 /* start footer */
 footer {
+  background-color: #191919;
+  color: #b9b9b9;
+  padding: 70px 0 0;
 }
-footer .about-me {
-}
-footer .about-me h2 {
-}
-footer .about-me ul {
-}
-footer .about-me ul li {
-}
-footer .about-me ul li a {
-}
-footer .about-me ul li i {
-}
-footer .about-me p {
-}
-footer .my-works {
-}
-footer .my-works ul {
-}
-footer .my-works ul {
-}
-footer .my-works ul li {
-}
-footer .my-works ul li a {
-}
-footer .addresses {
-}
-footer .addresses .box {
-}
-footer .addresses .box i {
-}
-footer .addresses .box p {
-}
-footer .addresses .box p span {
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
 }
 
+footer .about-me h2 {
+  margin: 0;
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+footer .about-me ul {
+  display: flex;
+  gap: 10px;
+}
+
+footer .about-me ul li a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  background-color: #313131;
+  color: #b9b9b9;
+  transition: var(--main-transition);
+}
+footer .about-me ul li .facebook:hover {
+  background-color: var(--main-color-alt);
+}
+footer .about-me ul li .twitter:hover {
+  background-color: var(--main-color);
+}
+footer .about-me ul li .youtube:hover {
+  background-color: #ff0000;
+}
+footer .about-me p {
+  line-height: 1.4;
+}
+footer .my-works ul li {
+  padding: 15px 0;
+  transition: var(--main-transition);
+}
+footer .my-works ul li:not(:last-child) {
+  border-bottom: 1px solid #444;
+}
+footer .my-works ul li a {
+  color: #b9b9b9;
+  transition: var(--main-transition);
+}
+footer .my-works ul li a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f101";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--main-color);
+}
+footer .my-works ul li:hover a {
+  padding-left: 10px;
+  color: white;
+}
+
+footer .addresses .box {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin: 0 0 30px 0;
+}
+footer .addresses .box i {
+  color: var(--main-color);
+}
+footer .addresses .box p {
+  line-height: 1.8;
+  margin: 0;
+}
+footer .addresses .box p span {
+  display: block;
+}
+
+footer .image img {
+  max-width: 78px;
+  border: 3px solid white;
+  margin: 2px;
+}
+footer h3 {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #444;
+  margin:50px 0 0 0 ;
+  color: white;
+  font-size:25px ;
+}
+footer h3 > span {
+  color: var(--main-color);
+  transform: rotate(-90deg);
+  display: inline-block;
+  
+  
+}
 /* end footer */
 /* start anmashin */
 @keyframes up-dwon {
